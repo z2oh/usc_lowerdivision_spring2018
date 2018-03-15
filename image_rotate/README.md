@@ -1,6 +1,10 @@
-# Name TBD
+# ASCII Art Rotation
 
-**TODO** Description
+You've drawn up some beautiful ASCII art! However, you've just realized it
+really would be better if it was rotated a bit.
+
+You must scan in your ASCII art, rotate it by a given angle, then display
+the output.
 
 # Input Format
 
