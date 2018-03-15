@@ -37,22 +37,22 @@ def rot_counterclockwise(i, j):
         if j == 1:
             return output
         else:
-            return rot_counterclockwise(output, n-1)
+            return rot_counterclockwise(output, j-1)
 
 def rot_clockwise(i, j):
     # rotate i 90 degrees clockwise, j many times
     if j < 1:
         return i
     elif j == 1:
-        return rot_counterclockwise(i, 2)
+        return rot_counterclockwise(i, 3)
     else:
-        return rot_clockwise(rot_clockwise(i, 1), n-1)
+        return rot_clockwise(rot_clockwise(i, 1), j-1)
 
 result = None
 if k > 0:
     result = rot_clockwise(image, (k % 360) / 90)
 else:
-    result = rot_counterclockwise(image, (k % 360) / 90)
+    result = rot_counterclockwise(image, ((-1 * k) % 360) / 90)
 
 
 for row in range(n):
