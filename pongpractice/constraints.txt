@@ -1,0 +1,21 @@
+Constraints of the problem's possible input:
+[This is for Generating Test Cases]
+Largest Number Constraint: C
+
+Order of input:
+  Court Length (m: 2 <= m <= C)
+  Court Width (n: 2 <= n <= C)
+  Ball Start Position (x: 0 <= x <= m - 1)
+  Ball Start Direction ({SE , NE})
+  Number of Player Hits (p: 1 < p < (n/2))
+
+Court Size will range from 2x2 to an arbitrarily large number mxn where m is length and n is width
+Ball Starting position will always be from 0 to m - 1
+Ball Direction will start either with SE or NE
+player hits will range from 1 to (n/2)
+
+Optional Cases to make things more interesting [*This would involve needing to change the documentation]:
+  1x1 court
+  Player Hits ball in Direction of {SW, NW}
+  # Player hits is 0
+  Could mark the endpoint with an X

@@ -1,0 +1,53 @@
+Format of the Program's output:
+[Use this for generating Test Cases]
+
+First, let's get acquainted with Pong itself.
+The ball can only move in 4 different directions and has no change in velocity during gameplay. The ball can only move NorthWest, NorthEast, SouthWest, and SouthEast. 
+
+..N..
+.\|/.
+W-+-E
+./|\.
+..S..
+
+When the ball touches a wall or the player position, it will reflect off of the wall. If it reflects off of where the player is standing, it will also reflect only if the player has not yet hit the ball a certain number of times.
+
+The field itself is a practice field with a border shown.
+
+For a 9x5 size field with ball starting at 0 and the ball moving Southeast with 1 player hit, the input will be:
+>>> 9 5 0 SE 1
+
+and will output:
+
+***********
+. .     . *
+ . .   . .*
+. . . . . *
+   . . .  *
+    . .   *
+***********
+
+In the above field, the character "*" notates a wall that the ball will reflect off of, the " " character denotes an empty space and the "." character denotes a place where the ball has been. As for the dimensions of the field, the output should give a grid of width + 2 and length + 2. Those 2 extra characters account for the walls and/or player position.
+
+|************
+P.         .* <- Ball Starts at Position 0
+L .       . *
+A  .     .  *
+Y   .   .   *
+E    . .    *
+R     .     *
+|************
+
+The Ball Starts at Position 0 in this example, which is the top-left corner. 
+
+Ball Start Positions:
+|V***********
+0     .     *
+1    . .    *
+2   .   .   *
+3  .     .  *
+4 .       . *
+5.         .*
+|^***********
+
+Note that the column noted by the ^ and V marks are where the ball will be hit by the player and reflect just as it would off of a wall. However, once the player hits it a certain number of times, the simulation will end, so the number of hits must be kept track of.

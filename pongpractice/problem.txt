@@ -1,0 +1,87 @@
+Paul's Perfect Pong Practice Program
+
+STATEMENT:
+Paul plays Pong.... like a LOT of pong, and is very good at it. However he wants to be the best, and as such he needs a way to practice his potential pong plays. But this can't be just any old pong simulator, it needs to account for various field sizes and track the position of the ball at all times. Unfortunately for Paul the Pong Player, he plays the game on an old POSIX-compliant dumb terminal that displays the entire game using the characters "*","."," ". Thankfully he does have access to a printer for those bigger fields.
+Write Paul a Pong Practice Program that tracks the position of the ball on a practice field for a given court size, ball start position and direction, and a certain number of hits.
+
+INPUT FORMAT:
+There will be 5 different parameters for a simulation given in the following order:
+  * Court Length (l: 2 <= l <= C)
+  * Court Width (w: 2 <= w <= C)
+  * Ball Start Position (s: 0 <= s <= l - 1) 
+    * The upper left corner of the field is position 0. Input can range from 0 to length - 1
+  * Ball Start Direction ({"SE", "NE"})
+    * The ball only moves either SouthEast (SE) or NorthEast (NE).
+  * Number of Player Hits (p: 1 < p < infinity)
+  
+CONSTRAINTS:
+Court Size  is an mxn field (dimensions do not need to match) that will Range from 2x2 to an arbitrarily large number, C.
+The Ball Starting Position will range from 0 to length - 1, where 0 is the top left corner of the playing field.
+Note that the ball's path may overlap itself.
+This version of PONG may work a little differently. The ball only moves in 4 directions: {North-East, South-East, North-West, South-West} and has no change in velocity during gameplay. The court is also a practice field, with 3 walls surrounding the player. Once the player hits the ball a certain number of times, the simulation will end and the path will be printed out.
+
+OUTPUT:
+
+|************
+P.         .* <- Ball Starts at Position 0, moves SE
+L .       . *
+A  .     .  *
+Y   .   .   *
+E    . .    *
+R     .     *
+|************
+
+Ball Start Positions:
+|V***********
+0     .     *
+1    . .    *
+2   .   .   *
+3  .     .  *
+4 .       . *
+5.         .*
+|^***********
+where the court is 10x6, and the ball is hit once
+
+
+EXAMPLE:
+For a 9x5 size field with ball starting at 0 and the ball moving Southeast with 1 player hit, the input will be:
+>>> 9 5 0 SE 1
+
+and will output:
+
+***********
+. .     . *
+ . .   . .*
+. . . . . *
+   . . .  *
+    . .   *
+***********
+
+EXAMPLE:
+11
+9
+4
+NE
+2
+*************
+  . .   .   *
+ . . . . .  *
+. . . .   . *
+ .   . .   .*
+. . . . . . *
+   .   . .  *
+  . .   . . *
+ .   . . . .*
+.     .   . *
+*************
+
+EXAMPLE:
+2
+2
+1
+SE
+1
+****
+ . *
+. .*
+****
