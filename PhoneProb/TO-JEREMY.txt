@@ -1,0 +1,22 @@
+
+Ok so in some ways this is a rehash of Dan's Dictionary just with integers instead of strings.
+
+The naive double loop solution will only run on a subset of the test cases for partial credit.
+I need to generate test cases and matching output solution but I have a few included here. 
+
+So one solution is just to presort the phone numbers to be checked and run binary search. However,
+since I explicitely declared that all phone numbers in each list are uninque another approach is
+to take the difference between the sum of the lengths of the list and the the length of the concatenation of the lists converted to sets. This will count the number of items that appear in both lists.
+
+that is...
+	List Nlist, Klist
+	return (Nlist.length + Klist.length) - (set(Nlist) + set(Klist)).length
+
+Instead of returning a series of booleans, I return an integer, which allows this above method to work. It's fun cause it can be done in one line of python and is easy to explain once the person knows that sets cannot contain duplicates. 
+
+I still need to...
+	generate more test cases and their correspoding output files
+	write a non-naive solution in Java
+	write example cases for the problem description
+	determine cutoff runtimes
+	

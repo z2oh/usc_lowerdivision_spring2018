@@ -1,0 +1,29 @@
+Viraj has a list of K phone numbers of his favorite pizza joints that he used to go to when he lived in Columbia. However, he doesn't want to call all the numbers on the list to see if they're still open.
+
+That's where you come in: luckily, JJ Shepherd has a dataset, The Pizzabook, containing all N phone numbers of active pizzeria's in the city.
+
+Since we're in Columbia, phone numbers need only be 7 digits long - they do not have a country or area code attached nor do they contain any special characters.
+
+All the numbers in The Pizzabook are unique. As are the numbers on Viraj's list.**
+
+You're job is to tell Viraj the number of phone numbers that appear both in The Pizzabook and on his list of pizza joints.
+
+n.b. You will receive partial credit for a naive solution. However, full credit requires a solution that runs faster than O(n^2). The intended efficient method runs O(nlg(n)).
+
+n.b. Python might be too slow to receive partial credit for the naive solution.
+
+Input Format
+
+The first line contains two space separated integers N and K. The second line contains N space separated integer. The next K lines each contain a single integer (the number to check for).
+
+Constraints
+
+0 < N < 10000000 (ten million) 0 < K < 100000
+
+All phone numbers will be unique within their own list (or set...).
+
+There are a lot of pizza joints in Columbia...
+
+Output Format
+
+A single integer - the number of pizza joint numbers that are in The Pizzabook and on Viraj's list.
