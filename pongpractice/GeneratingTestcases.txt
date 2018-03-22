@@ -1,0 +1,13 @@
+How to Generate Test Cases if needed:
+=====================================
+All Generation scripts are located inside of the /gen directory. 
+
+gen.sh -> Generates a whole bank of test cases starting at a given point
+  gen.sh <# Test Cases to Generate> <# Test Case to start on> <MAX #>
+  
+genInput.sh -> Generates an individual Test Case. Note: Will fail if the file exists.
+  genInput.sh <MAX #> <Test Case #>
+  Note: The version supplied uses my Java Solution, meaning it transverses to that directory and runs the program using the given input and records the output as the solution to that input. You can use the Python Solution, but it will probably take longer.
+Input is generated randomly from the MAX Number. You should pick a MAX # such that it doesn't take forever to generate the result using the provided solution (or one that you make that is faster).
+
+Both Solutions should produce the same output given the same input.
